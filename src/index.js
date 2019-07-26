@@ -4,7 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Container } from '@cerebral/react';
+import CerebralApp from './cerebral-app';
+
+
+ReactDOM.render(
+  <Container app={CerebralApp}>
+    <App />
+  </Container>
+, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
