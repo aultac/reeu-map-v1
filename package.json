@@ -1,11 +1,13 @@
 {
   "name": "reeu-map-v2",
   "version": "0.1.0",
+  "homepage": "https://aultac.github.io/reeu-map-v1",
   "private": true,
   "dependencies": {
     "@cerebral/react": "^4.1.1",
     "axios": "^0.19.0",
     "cerebral": "^5.1.1",
+    "gh-pages": "^2.0.1",
     "leaflet": "^1.5.1",
     "md5": "^2.2.1",
     "react": "^16.8.6",
@@ -17,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

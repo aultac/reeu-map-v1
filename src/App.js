@@ -21,13 +21,12 @@ export default connect({
   loadBoundary: sequences`loadBoundary`,
 
 }, function App(props) {
-console.log('redrawing!!! boundary = ', md5(JSON.stringify(props.boundary)));
   return (
     <div className="App">
       <button onClick={() => props.loadBoundary()}>Load Boundary</button>
       <Map style={{height: "100vh"}} center={props.center} zoom={zoom}>
         <TileLayer
-          url='http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}'
+          url='https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}'
           subdomains={['mt0','mt1','mt2','mt3']}
         />
         <GeoJSON key={md5(JSON.stringify(props.boundary))} data={props.boundary} color={props.color} onClick={() => props.mapClicked() }/>
