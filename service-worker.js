@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/reeu-map-v1/precache-manifest.7b934926b31076abcb16d5abaab8c222.js"
+  "/reeu-map-v1/precache-manifest.23ecbe54bc4544554e8617d63caa4af2.js"
 );
 
 self.addEventListener('message', (event) => {
